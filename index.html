@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-5.9.0-web/css/all.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    audio {
+        width: 300px;
+        height: 54px;
+    }
+
+    input[type="range"] {
+        padding: 1em;
+    }
+
+    .btn-switch {
+        margin-left: -1em;
+    }
+
+    .switch {
+        background-color: #007bff;
+    }
+  #control-pannel{
+      transition: 1000ms;
+      visibility: hidden;
+      /* visibility: visible; */
+      display: none;
+  }
+  .fa-cog{
+      transition: 1000ms;
+  }
+  .fa-cog:hover{
+        /* transform: scale(1.2); */
+        transform: rotate(90deg) scale(1.2);
+        
+  }
+  
+</style>
+
+<body>
+    <div class="container pt-5">
+        <div class="col-10 offset-1">
+            <div class="card shadow">
+                <div class="card-header text-center bg-primary">
+                    <h4 class="text-light" id="title">Arabic</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row" id="drum-container">
+                        
+                            <div class="col-10">
+                           
+                                    <span>
+                                        <i class="fa fa-cog" aria-hidden="true" id="settings"></i>
+                                    </span>
+                                    <div class="col-12" id="control-pannel">
+
+                                        <div class="row">
+                                            
+                                        <div class="form-group col-6">
+                                                <label for="">Volume</label>
+                                                <input type="range" name="" id="range" class="form-control" min="0" max="1"
+                                                    step="0.2">
+            
+                                        </div>
+            
+                                            <div class="col-5">
+                                                <div class="switch col-5">
+                                                    <div class="col-6 bg-danger py-3 btn-switch" id="btn-switch"></div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <small><span
+                                                        class="text-success" title="English">ENG :</span> <span class="text-primary" title="Arabic"> ARB </span> </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- <hr> -->
+        
+                                    </div>
+                                </div>
+                        <div class="col-12" id="left-panel">
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+<script src="fontawesome-free-5.9.0-web/js/all.js"></script>
+
+</html>
