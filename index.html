@@ -23,6 +23,8 @@
 
     .btn-switch {
         margin-left: -1em;
+        /* color: blue !; */
+        cursor: pointer;
     }
 
     .switch {
@@ -30,7 +32,7 @@
     }
   #control-pannel{
       transition: 1000ms;
-      visibility: hidden;
+      /* visibility: hidden; */
       /* visibility: visible; */
       display: none;
   }
@@ -42,7 +44,19 @@
         transform: rotate(90deg) scale(1.2);
         
   }
-  
+  #play,#pause,#reload{
+      font-size: 1.5em !important;
+      transition: 800ms;
+  }
+  #reload:hover{
+    transform: scale(0.8) rotate(40deg);
+     color: whitesmoke;
+   
+  }
+  #pause:hover,#play:hover{
+      transform: scale(0.8);
+     color: whitesmoke;
+  }
 </style>
 
 <body>
@@ -50,7 +64,21 @@
         <div class="col-10 offset-1">
             <div class="card shadow">
                 <div class="card-header text-center bg-primary">
-                    <h4 class="text-light" id="title">Arabic</h4>
+                    <div class="row">
+                            <div class="col-8">
+                                    <h4 class="text-light" id="title">Arabic</h4>
+                               </div>
+                               <div class="col-4" id="play-controls">
+                                    <button type="button" name="" id="play-all" class="btn btn-secondary btn-sm btn-block col-4">Play All</button>
+                               </div>
+
+                              
+                               <!-- <i class="fa fa-pause" aria-hidden="true"></i> -->
+                               
+                    </div>
+                   
+                    
+                   
                 </div>
                 <div class="card-body">
                     <div class="row" id="drum-container">
@@ -65,8 +93,8 @@
                                         <div class="row">
                                             
                                         <div class="form-group col-6">
-                                                <label for="">Volume</label>
-                                                <input type="range" name="" id="range" class="form-control" min="0" max="1"
+                                                <label for="">Volume <span id="volume"> 30</span> </label>
+                                                <input type="range" name="" id="range" class="custom-range" min="0" max="1"
                                                     step="0.2">
             
                                         </div>
